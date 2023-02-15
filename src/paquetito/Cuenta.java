@@ -4,7 +4,12 @@ public class Cuenta {
 	protected double saldo;
 	protected int agencia;
 	protected int numero;
-	protected String titular;
+	protected Cliente titular;
+
+	@Override
+	public String toString() {
+		return "Cuenta [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
+	}
 
 	public void depositar(double valor) {
 		this.saldo += valor;
