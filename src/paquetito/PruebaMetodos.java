@@ -9,7 +9,7 @@ public class PruebaMetodos {
 		miCuenta.retirar(500);
 		
 		miCuenta.tranferir(200,otraCuenta);
-		System.out.println("Mi cuenta: "+miCuenta.saldo);
-		System.out.println("OtraCuenta: "+otraCuenta.saldo);
+//		System.out.println("Mi cuenta: "+miCuenta.saldo);
+//		System.out.println("OtraCuenta: "+otraCuenta.saldo);
 	}
 }

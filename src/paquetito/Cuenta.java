@@ -1,18 +1,36 @@
 package paquetito;
 
 public class Cuenta {
-	protected double saldo;
-	protected int agencia;
-	protected int numero;
-	protected Cliente titular;
+	private double saldo;
+	private int agencia;
+	private int numero;
+	private Cliente titular;
 
-	@Override
-	public String toString() {
-		return "Cuenta [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+	public int getAgencia() {
+		return this.agencia;
+	}
+	public void setNumero(int numero) {
+		if(numero>0) {
+			this.numero = numero;			
+		}
+	}
+	public int getNumero() {
+		return this.numero;
+	}
+	public void setTitulat(Cliente titular) {
+		this.titular = titular;
+	}
+	public Cliente getTitular() {
+		return this.titular;
 	}
 
 	public void depositar(double valor) {
-		this.saldo += valor;
+		if(valor>0) {
+			this.saldo += valor;
+		}
 	}
 
 	public boolean retirar(double valor) {
@@ -34,4 +52,8 @@ public class Cuenta {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return "Cuenta [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
+	}
 }
