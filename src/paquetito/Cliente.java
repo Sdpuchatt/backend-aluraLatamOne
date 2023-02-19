@@ -5,7 +5,11 @@ public class Cliente {
 	String numeroIdentidad;
 	String profesion;
 	
-	
+	public Cliente(String nombre, String numeroIdentidad,String profesion) {
+		this.nombre = nombre;
+		this.numeroIdentidad = numeroIdentidad;
+		this.profesion = profesion;
+	}
 	public String getNombre() {
 		return nombre;
 	}

@@ -5,7 +5,15 @@ public class Cuenta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
+	static int cantidadCuentas = 0;
 
+	public Cuenta(double saldo, int agencia, int numero, Cliente titular) {
+		this.saldo = saldo;
+		this.agencia = agencia;
+		this.numero = numero;
+		this.titular = titular;
+		cantidadCuentas++;
+	}
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
 	}
